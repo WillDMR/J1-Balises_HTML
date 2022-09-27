@@ -1,0 +1,37 @@
+/*Pour les éléments sémantiques, on rajoute rien*/
+p{
+    color: red;
+}
+
+/*Pour une classe, on rajoute un . devant le nom*/
+.blue{
+    color: blue;
+}
+
+/*Pour un id, on ajoute un # devant le nom*/
+#baseline{
+    border: 2px solid black;
+    font-size: 50px;
+}
+
+/*On peut très bien assigner les mêmes propriétés à plusieurs éléments grâce à la virgule*/
+h2, span{
+    background: orange;
+    color: black;
+    font-weight: bold;
+}
+
+/*Pour sélétionner de façon universelle*/
+*{
+    font-size: 20px;
+}
+
+/*On séléctionne les strongs uniquements dans les paragraphes*/
+p strong{
+    color: black;
+}
+
+p strong i{
+    color: pink;
+}
+
