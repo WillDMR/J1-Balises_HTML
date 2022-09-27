@@ -8,3 +8,29 @@ h2
 .red{
     color: red;
 }
+
+html{
+    /*on va rendre le scroll plus fluide*/
+    scroll-behavior: smooth;
+}
+
+/*je decide que mes liens ne sois pas surlignés*/
+a{
+    text-decoration: none;
+    /*La couleur de tous les liens*/
+    color: lightslategrey;
+}
+
+/* Je decide de la couleur de mes liens visités*/
+
+a:visited{
+    color:green;
+}
+
+/*je choisit la couleur / comportement du lien au survol de la souris*/
+
+a:hover{
+    background:orange;
+    text-decoration: underline;
+    color: black;
+}
