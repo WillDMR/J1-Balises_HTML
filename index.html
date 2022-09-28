@@ -11,9 +11,13 @@
     <meta name="desciption" content="Nous découvrons ici les premières balises HTML">
     <!-- On va lier note fichier CSS de styles à notre page HTML-->
     <link rel="stylesheet" href="assets/css/main.css">
+    <!--On itègre la police font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <!-- c'est notre titre mais c'est aussi le text qui s'affiche dans l'onglet du navigateur-->
     <title>Les balises HTML</title>
 </head>
+
+<!--La police font awesome-->
 
 <!-- C'est le corps du document, la partie affichée dans le navigateur-->
 <body>
@@ -35,7 +39,7 @@
         ils viennet les compléter pour donner de nouvelles informations -->
 
         <balise attribut="valeur" />
-
+        
         <!-- LIEN VERS NOTRE PORTEFOLIO-->
         <a href="portfolio.html">Découvrez mes créations</a>
         <!--LIENS VERS NOTRE PAGE CONTACT-->
@@ -44,11 +48,13 @@
     <!--LIENS VERS LES SECTIONS DE NOTRE PAGE-->
     <!--La partie principale du site entre le header et footer-->
     <main>
-    <p>Accès rapide</p> 
-    <!-- On lie notre lien à l'id du block souhaité-->
-    <!--on rajoute l'attribut title pour ajouter une infobulle -->
-    <a href="#expPro" title="Accéder aux experience professionnelles">Expériences professionnelles</a> <br/>
-    <a href="#formation" title="Accéder aux formations">Formations</a>
+    <nav class="flex">
+        <p>Accès rapide</p> 
+        <!-- On lie notre lien à l'id du block souhaité-->
+        <!--on rajoute l'attribut title pour ajouter une infobulle -->
+        <a href="#experience" title="Accéder aux experience professionnelles">Expériences professionnelles</a> <br/>
+        <a href="#formation" title="Accéder aux formations">Formations</a>
+    </nav>
     <!-- ORGANISATION DU TEXTE  -->
 
     <!-- On rajoute un bloc de type section-->
@@ -67,16 +73,26 @@
             <!--Pour effectuer un saut de ligne, j'utilise <br> -->
             <br/>
             <!-- Pareil pour le téléphone-->
-            <a href="tel:+33640591624">+33 (0)6 40 59 16 24</a>
+            <a href="tel:+33640591624">+33 (0)6 40 59 16 24</a> <br/>
+            <!--LOrsque les logiciels d'aide à la lecture tombent sur une icone
+            pas interpretable, on utilise un aria-label afin d'indiquer
+            la conduite à tenir-->
+            <a href="https://www.facebook.com"     
+               target="_blank"
+               aria-label="Devenez fan sur Facebook">
+                <!--Liens vers facebook, avec icon -> font awesome-->
+                <i class="fa-brands fa-facebook"></i>
+                <span>Facebook</span> 
+            </a>
         </address>
     </section>
 
     <!-- DEBUT SECTION EXP PRO-->
-    <section>
-        <h2 id="expPro">Expériences professionnelles</h2>
+    <section aria-labelledby="experience">
+        <h2 id="experience">Expériences professionnelles</h2>
         <!-- On va utiliser la liste non-ordonnées-->
         <ul>
-            <!-- on y insère des puces-->
+            <!-- on y insère des puces--> 
             <li>
                 <!-- On place un titre-->
                 <h3>Un <span class="red">
