@@ -1,12 +1,49 @@
-.intro{
-    background: red;
+/*Police d'écriture*/
+@font-face {
+    font-family: 'SouthAustralia';
+    src: url('../assets/font/south_australia_2/South\ Australia.ttf');
 }
-
 header{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;  
+    align-items: flex-end; 
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+    padding-right: 5px;
+}
+header, .summary{
+    background : url("https://img.freepik.com/free-photo/plain-pastel-green-with-beige-wooden-product-background_53876-102458.jpg?w=1060&t=st=1664442993~exp=1664443593~hmac=7eab6a8992d13d86b1003b6d6ad584b491c186ad9a831450aa070208b8b71360") ;
 }
 
 header h1{
+    font-size: 100px;
+}
+
+header h2{
     font-size: 50px;
+}
+header h2 abbr{
+    text-decoration: none;
+}
+
+
+header h1, header h2{
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 10px;
+    font-family: 'SouthAUstralia',Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+body{
+    margin: 0px;
+}
+
+.summary{
+    font-style: italic;
+    margin-top: 0%;
+    padding-top: 0%;
+    border-bottom: 1px solid rgb(213, 235, 222);
+    border-radius: 0% 0% 50% 0%;
 }

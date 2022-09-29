@@ -1,0 +1,88 @@
+.btn{
+    background: rgb(255,07,23);
+    color: black;
+    font-size: 3vw;
+    cursor: pointer;
+    padding: 1em;
+    width: 500px;
+    border-radius: 20px;
+    margin: 50px auto;
+    /*on va lui mettre une transformation (facultative quand elle est à 1)*/
+    transform: scale(1);
+    /*on Ajoute la durée afin de fluidifier l'animation*/
+    transition: 1s;  /*Ou bien 100ms*/
+
+}
+
+.btn:hover{
+    /*On augmente la valeur afin */
+    transform: scale(1.25);
+}
+
+form {
+    width: 500px;
+    margin: auto;
+}
+.container{
+    background: cadetblue;
+    padding: 20px 0;
+ }
+
+form input {
+    border: 2px solid #fff;
+    border-radius: 100em;
+    color: darkblue;
+    font-size: 2.5em;
+    outline: none;
+    padding: 1em;
+    width: 100%;   
+}
+
+/*On va utiliser une nouvelle pseudo classe focus lorsque notre input est sélectionné*/
+
+form input:focus{
+    border: green 2px solid;
+}
+
+/*On va utiliser la pseudo classe invalid afin de vérifier l'état des données saisies*/
+/*pour affiner tout cela, nous allons utiliser les pseudo classe not() combiné à focus :
+    :not() passera à true lorsque son sélecteur est à flase
+    :not() est true quand l'input N'EST PAS :focus
+    ici, si l'input n'est pas en focus ET si :invalid est true, la couleur rouge apparaît
+     quand notre utilisateur a terminé de rentrer son courriel*/
+form input:not(:focus):invalid{
+    border: 2px solid red;
+    background: red;
+    color: white;
+}
+
+
+.btn2{
+    background: rgb(255,07,23);
+    color: black;
+    font-size: 3vw;
+    cursor: pointer;
+    padding: 1em;
+    width: 500px;
+    border-radius: 20px;
+    margin: 50px auto;
+    /*on va lui mettre une transformation (facultative quand elle est à 1)*/
+    transform: scale(1);
+    /*on Ajoute la durée afin de fluidifier l'animation*/
+    transition: 1s;  /*Ou bien 100ms*/
+}
+
+.balle{
+    width: 200px;
+    height: 200px;
+    background: violet;
+    border-radius: 50%;
+    margin: auto;
+    transition: 400ms;
+}
+
+.btn2:hover + .balle{
+    transform: scale(1.25);    
+    transition: 400ms;
+    background: red;
+}

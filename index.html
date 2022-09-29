@@ -18,43 +18,58 @@
 </head>
 
 <!--La police font awesome-->
-
+ 
 <!-- C'est le corps du document, la partie affichée dans le navigateur-->
 <body>
     <!--Haut de notre page, header contien generalement la nav-->
     <header>
         <!-- LES TYPES DE BALISES-->
+        <div class="flex space-between">
+            <!-- Les balises en paires, par exemple <h1> qui correspond au titre principale de notre page-->
+            <div class="flex column">
+                <h1> William DAMOUR - Developper Web</h1>
+                <!-- Les balises orphelines, comme la balise <img> par exemple-->
+                <img src="assets/images/sunset.jpg" 
+                    alt="Couché de soleil" 
+                    width="240px"/>
+                <!-- Attention, par convention on peut fermer une balise orpheline
+                    Soit, on l'écrit <img>, ce qui est correct, soit pour  une meilleure lecture
+                    on l'écrit en la fermant comme ceci <img/> -->
+            </div>
+            <!-- Le attributs sont les "paramètres" de nos balises,
+            ils viennet les compléter pour donner de nouvelles informations -->
 
-        <!-- Les balises en paires, par exemple <h1> qui correspond au titre principale de notre page-->
-        <h1> William DAMOUR - Dev</h1>
-        <!-- Les balises orphelines, comme la balise <img> par exemple-->
-        <img src="assets/images/sunset.jpg" 
-            alt="Couché de soleil" 
-            width="240px"/>
-        <!-- Attention, par convention on peut fermer une balise orpheline
-            Soit, on l'écrit <img>, ce qui est correct, soit pour  une meilleure lecture
-            on l'écrit en la fermant comme ceci <img/> -->
-
-    <!-- Le attributs sont les "paramètres" de nos balises,
-        ils viennet les compléter pour donner de nouvelles informations -->
-
-        <balise attribut="valeur" />
-        
-        <!-- LIEN VERS NOTRE PORTEFOLIO-->
-        <a href="portfolio.html">Découvrez mes créations</a>
-        <!--LIENS VERS NOTRE PAGE CONTACT-->
-        <a href="contact/contact.html">Contactez moi</a> 
+            <balise attribut="valeur" />
+            <nav class="flex ">
+                <div class="flex column">
+                    <!-- LIEN VERS NOTRE PORTEFOLIO-->
+                    <a href="portfolio.html">Découvrez mes créations</a>
+                    <!--LIENS VERS NOTRE PAGE CONTACT-->
+                    <a href="contact/contact.html">Contactez moi</a> 
+                    <!--LOrsque les logiciels d'aide à la lecture tombent sur une icone
+                    pas interpretable, on utilise un aria-label afin d'indiquer
+                    la conduite à tenir-->
+                    <a href="https://www.facebook.com"     
+                       target="_blank"
+                       aria-label="Devenez fan sur Facebook">
+                            <!--Liens vers facebook, avec icon -> font awesome-->
+                            <i class="fa-brands fa-facebook"></i>
+                            <span>Facebook</span> 
+                    </a>
+                    <!--LIENS VERS LES SECTIONS DE NOTRE PAGE-->
+                    <!--La partie principale du site entre le header et footer-->
+                </div>
+                <div class="flex column">
+                    <span>Accès rapide</span> 
+                    <!-- On lie notre lien à l'id du block souhaité-->
+                    <!--on rajoute l'attribut title pour ajouter une infobulle -->
+                    <a href="#experience" title="Accéder aux experience professionnelles">Expériences professionnelles</a>
+                    <a href="#formation" title="Accéder aux formations">Formations</a>
+                </div>
+            </nav>
+        </div>
     </header>
-    <!--LIENS VERS LES SECTIONS DE NOTRE PAGE-->
-    <!--La partie principale du site entre le header et footer-->
     <main>
-    <nav class="flex">
-        <p>Accès rapide</p> 
-        <!-- On lie notre lien à l'id du block souhaité-->
-        <!--on rajoute l'attribut title pour ajouter une infobulle -->
-        <a href="#experience" title="Accéder aux experience professionnelles">Expériences professionnelles</a> <br/>
-        <a href="#formation" title="Accéder aux formations">Formations</a>
-    </nav>
     <!-- ORGANISATION DU TEXTE  -->
 
     <!-- On rajoute un bloc de type section-->
@@ -74,16 +89,6 @@
             <br/>
             <!-- Pareil pour le téléphone-->
             <a href="tel:+33640591624">+33 (0)6 40 59 16 24</a> <br/>
-            <!--LOrsque les logiciels d'aide à la lecture tombent sur une icone
-            pas interpretable, on utilise un aria-label afin d'indiquer
-            la conduite à tenir-->
-            <a href="https://www.facebook.com"     
-               target="_blank"
-               aria-label="Devenez fan sur Facebook">
-                <!--Liens vers facebook, avec icon -> font awesome-->
-                <i class="fa-brands fa-facebook"></i>
-                <span>Facebook</span> 
-            </a>
         </address>
     </section>
 
